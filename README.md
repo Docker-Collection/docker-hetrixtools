@@ -4,7 +4,7 @@ A keep updating repo for hetrixtools container.
 
 (Maybe someday, I will make this to alpine again?)
 
-Original author is mmohoney from [repo](https://github.com/mmohoney/hetrixtools-agent)
+Original author is mmohoney from [mmohoney/hetrixtools-agent](https://github.com/mmohoney/hetrixtools-agent).
 
 ## Note
 
