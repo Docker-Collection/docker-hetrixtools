@@ -3,12 +3,6 @@ FROM ubuntu:22.04@sha256:35fb073f9e56eb84041b0745cb714eff0f7b225ea9e024f703cab56
 
 ENV HETRIX_AGENT_PARAMS=''
 
-# About
-LABEL org.opencontainers.image.version="0.3.0" \
-      org.opencontainers.image.description="Container for Hetrix Linux agent" \
-      org.opencontainers.image.authors="mmohoney" \
-      org.opencontainers.image.source="https://github.com/Docker-Collection/docker-hetrixtools"
-
 # Copy start.sh script
 COPY start.sh ./start.sh
 
