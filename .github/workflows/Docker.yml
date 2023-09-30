@@ -8,22 +8,36 @@ on:
     branches:
       - main
     paths:
-      - Dockerfile
-      - start.sh
+      - 1.6.x/**
+      - 2.0.x/**
   pull_request:
     paths:
-      - Dockerfile
+      - 1.6.x/**
+      - 2.0.x/**
 
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  docker:
-    name: docker build
+  docker_latest:
+    name: docker build (2.0.x)
     uses: Docker-Collection/reusable-workflows/.github/workflows/docker-build.yml@main
     with:
       docker_name: "ghcr.io/docker-collection/hetrixtools"
+      context: "2.0.x"
+      dockerfile: "2.0.x/Dockerfile"
+      docker_label_author: "Efina"
+      docker_label_title: "Docker Hetrixtools"
+      docker_label_description: "Container for Hetrix Linux agent"
+
+  docker_old:
+    name: docker build (1.6.x)
+    uses: Docker-Collection/reusable-workflows/.github/workflows/docker-build.yml@main
+    with:
+      docker_name: "ghcr.io/docker-collection/hetrixtools-1.6"
+      context: "1.6.x"
+      dockerfile: "1.6.x/Dockerfile"
       docker_label_author: "Efina"
       docker_label_title: "Docker Hetrixtools"
       docker_label_description: "Container for Hetrix Linux agent"
