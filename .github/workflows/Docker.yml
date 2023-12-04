@@ -25,6 +25,7 @@ jobs:
     uses: Docker-Collection/reusable-workflows/.github/workflows/docker-build.yml@main
     with:
       docker_name: "ghcr.io/docker-collection/hetrixtools"
+      platforms: "linux/amd64,linux/arm64,linux/arm/v7"
       context: "2.0.x"
       dockerfile: "2.0.x/Dockerfile"
       docker_label_author: "Efina"
