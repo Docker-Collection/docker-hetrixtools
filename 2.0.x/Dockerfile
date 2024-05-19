@@ -23,7 +23,7 @@ RUN set -xe; \
     rm -rf /var/lib/apt/lists/*; \
     apt-get clean; \
     mkdir -p /etc/hetrixtools_dl; \
-    wget https://raw.githubusercontent.com/hetrixtools/agent/2.0.x/hetrixtools_install.sh -P /etc/hetrixtools_dl; \
+    wget https://raw.githubusercontent.com/hetrixtools/agent/2.2.x/hetrixtools_install.sh -P /etc/hetrixtools_dl; \
     cp etc/hetrixtools_dl/hetrixtools_install.sh etc/hetrixtools_dl/hetrixtools_install_cp.sh; \
     chmod --reference=etc/hetrixtools_dl/hetrixtools_install.sh etc/hetrixtools_dl/hetrixtools_install_cp.sh; \
     chown --reference=etc/hetrixtools_dl/hetrixtools_install.sh etc/hetrixtools_dl/hetrixtools_install_cp.sh; \
